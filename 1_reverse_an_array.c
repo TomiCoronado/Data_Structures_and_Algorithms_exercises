@@ -5,10 +5,8 @@ Given an array (or string), the task is to reverse the array/string
                   //      using namespace std;
 
 /* Function 1 to reverse arr[] from start to end (using a for loop)*/
-        // Esta funcion no se si la tengo bien
-        // De hecho, no funciona si s no vale 0
-        // pues cuando i=0 a end le restamos s
-        // Mejor usar las funciones 2 o 3 de abajo.
+        // This fuction does not work when s (in main()) is 0
+        // It is better to use Functions 2 or 3
 void reverseArray1(int arr[], int start, int end){
     int i, arr_aux;
     for(i=start;i<=start+(end-start)/2;i++){
@@ -44,12 +42,12 @@ void reverseArray3(int arr[], int start, int end){
 void printArray(int arr[], int size){
     int i;
     for (i=0; i<size; i++) 
-        printf("%d ", arr[i]);  // Fijate que como solo tengo una sentencia  
-                                // dentro de este for, no necesito los {}
+        printf("%d ", arr[i]);  
+  
     printf("\n");
     /*
     C++:
-    for (int i=0; i<size; i++)  // No hace falta declarar i si lo hago aqui
+    for (int i=0; i<size; i++)  
         cout << arr[i] << " ";
  
     cout << endl;
@@ -59,8 +57,8 @@ void printArray(int arr[], int size){
 /* Driver function to test above functions*/
 int main(){
     int arr[] = {1, 2, 3, 4, 5, 6};
-    int n = sizeof(arr)/sizeof(arr[0]); // numero de elementos, n=6; n-1=5
-    int s,e;
+    int n = sizeof(arr)/sizeof(arr[0]); // number of elements, n=6; n-1=5
+    int s,e;                            // start and end
     printArray(arr, n);
     printf("Reverse array using Funtion 1: \n");
     s=1;
@@ -77,7 +75,7 @@ int main(){
     return 0;
 }
 
-// Date cuenta de que este codigo está pensado para que podamos hecer el reverse del
-// array desde el elemento que nosotros queramos hasta el que nosotros queramos (creo).
+// This program allows the user to reverse any array form an arbitrary start to 
+// an arbitrary end.
 
-// En las tres funciones (1,2 y 3) el time complexity es O(n)
+// Time complexity es O(n) in each of the three funcions
