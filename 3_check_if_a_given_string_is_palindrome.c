@@ -5,8 +5,7 @@ string. For example, “abba” is palindrome, but “abbc” is not palindrome.
 */
 
 #include<stdio.h>
-#include<string.h>  // Necesitamos este fichero de cabecera para 
-                    // medir la longitud de un string en C.
+#include<string.h>  // This headder file contains the prototype of strlen()
 
 /* A function to check if a string str is palindrome*/
 void isPalindrome(char str[]){
