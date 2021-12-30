@@ -17,7 +17,7 @@ then change min, else if the element is greater than max then change max, else
 ignore the element)*/
 
 // C++ program of above implementation
-#include<iostream>  // En C: #include<stdio.h>
+#include<iostream>  // C: #include<stdio.h>
 using namespace std;
 
 // Pair struct is used to return two values from getMinMax()
@@ -27,7 +27,7 @@ struct Pair{
 };
 
 struct Pair getMinMax_v1(int arr[], int n){
-    struct Pair minmax; // Esta variable, de tipo struct Pair, es la que devolvemos
+    struct Pair minmax; // This variable is what we return
     int i;
 
     // If there is only one element then return it as min and max both
@@ -36,9 +36,9 @@ struct Pair getMinMax_v1(int arr[], int n){
         minmax.max = arr[0];
         return minmax;
     }
-    // If there are more than one elements, then initialize min and max
-    // (si el código ha continuado avanzando, es decir si no hemos pasado por el
-    // return anterior, entonces tenemos más de un elemento)
+    // If there are more than one element, then initialize min and max
+    // (if the previous if condition wasn't true it means that next 
+    // sentences continue to ve executed)
     if (arr[0]>arr[1]){
         minmax.max = arr[0];
         minmax.min = arr[1];
@@ -65,7 +65,7 @@ int main(){
                  1, 330, 3000};
     int arr_size = 6;
     
-    // Metodo 1:
+    // Method 1:
     struct Pair minmax = getMinMax_v1(arr, arr_size);
 
     cout << "Minimum element is "
