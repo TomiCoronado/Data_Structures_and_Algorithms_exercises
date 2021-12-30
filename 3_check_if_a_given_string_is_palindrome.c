@@ -11,21 +11,16 @@ string. For example, “abba” is palindrome, but “abbc” is not palindrome.
 void isPalindrome(char str[]){
     int l = 0;
     int h = strlen(str) - 1;
-    while (l<h){    // Con recorrer la mitad del string nos basta.
-                    // Y basta con que una sola pareja de letras 
-                    // no sea igual para que podamos decir que no
-                    // palindrome y salir de la funcion.
+    while (l<h){    // We only need to compere the first half of the string 
+                    // with the elements in the second half
         if (str[l++] != str[h--]){
             printf("\n %s is not palindrome", str);
-            return;
+            return; // When a couple of elements are not equal we can exit the funtion
         }
-        // Creo que también podríamos poner el l++ y el h-- aqui
-        // pero queda más elegante donde lo hemos puesto.
+        // ++l and --h can also be written here instead of in the if condition
     }
-    printf("\n %s is palindrome", str);  // Si en el bucle anterior 
-                                      // no se ha producido que 
-                                      // ninguna pareja sea diferente
-                                      // entonces es palindrome.
+    printf("\n %s is palindrome", str);  // If we haven`t exited the funtion from the previous loop,
+                                         // then the string is palindrome
 }
 
 /* Driver program to test above function*/
