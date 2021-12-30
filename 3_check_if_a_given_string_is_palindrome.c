@@ -19,7 +19,7 @@ void isPalindrome(char str[]){
         }
         // ++l and --h can also be written here instead of in the if condition
     }
-    printf("\n %s is palindrome", str);  // If we haven`t exited the funtion from the previous loop,
+    printf("\n %s is palindrome", str);  // If we haven't exited the funtion from the previous loop,
                                          // then the string is palindrome
 }
 
