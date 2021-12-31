@@ -54,6 +54,16 @@ If n is odd then initialize min and max as first element.
 If n is even then initialize min and max as minimum and maximum of the first two elements respectively. 
 For rest of the elements, pick them in pairs and compare their 
 maximum and minimum with max and min respectively.
+Total number of comparisons: Different for even and odd n, see below: 
+    If n is odd:    3*(n-1)/2  
+    If n is even:   1 Initial comparison for initializing min and max, 
+                           and 3(n-2)/2 comparisons for rest of the elements  
+                      =  1 + 3*(n-2)/2 = 3n/2 -2
+Second and third approaches make the equal number of comparisons when n is a power of 2. 
+In general, method 3 seems to be the best.
+
+(It is 3/2 because we have to check always 3 conditions within the while loop, but the i index 
+increments its value by 2 each iteration)
 */
 
 // C++ program of above implementation
